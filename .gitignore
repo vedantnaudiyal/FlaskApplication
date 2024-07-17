@@ -1,4 +1,4 @@
 # ignoring virtualk env
 .venv
 
-application/__pycache__/
+*.pyc
