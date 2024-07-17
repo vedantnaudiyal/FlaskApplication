@@ -1,3 +1,4 @@
 # ignoring virtualk env
 .venv
 
+__pycache__/
