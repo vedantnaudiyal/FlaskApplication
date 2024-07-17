@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block title %}Changed{% endblock %}
+{% block content %}
+<h1 align="center">Welcome this is the home page!:</h1>
+</br>
+<h3 align="center">All registered Employees till date are:</h3>
+<ul class="list-group list-group-flush" id="employees">
+    {% for employee_item in employees %}
+    <li class="list-group-item">
+        <div class="container">
+            <h6>Employee details :</h6>
+            <div>Name: {{ employee_item.name }}</div>
+            <div>email: {{ employee_item.email }}</div>
+            <div>Age: {{ employee_item.age }}</div>
+            <div>IsActive: {{ employee_item.isActive }}</div>
+        </div>
+        <button class="btn btn-danger my-2 mx-3" onclick="deleteEmployee({{employee_item.id}})">
+            Delete employee!
+        </button>
+        <button class="btn btn-success my-2 mx-3" onclick="editEmployee({{employee_item.id}})">
+            Edit employee!
+        </button>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
