@@ -63,9 +63,8 @@
     <script type="text/javascript">
       function deleteEmployee(employeeId) {
         alert("del")
-          fetch("/employees", {
+          fetch(`/employees/${employeeId}`, {
             method: "DELETE",
-            body: JSON.stringify({ employeeId: employeeId }),
           }).then((_res) => {
             window.location.href = "/";
           });
