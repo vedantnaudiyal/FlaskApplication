@@ -20,11 +20,11 @@ def create_app(configs):
 
     from .views import views
     from .auth import auth
-    from .auth import oauth_github_blueprint
+    # from .auth import oauth_github_blueprint
 
 
     app.register_blueprint(views, url_prefix="/")
-    app.register_blueprint(oauth_github_blueprint, url_prefix="/github_login")
+    # app.register_blueprint(oauth_github_blueprint, url_prefix="/github_login")
     app.register_blueprint(auth, url_prefix="/")
 
     from .models import Employee
