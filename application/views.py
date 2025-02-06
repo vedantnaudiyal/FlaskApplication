@@ -28,7 +28,7 @@ views=Blueprint('views', __name__)
 @views.route('/')
 @login_required
 def home():
-    print("hello world")
+    print("hello world UPD!")
     return render_template("home.html", employee=current_user, employees=Employee.query.all())
 
 @views.route('/callback')

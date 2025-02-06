@@ -4,7 +4,8 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     VENV_PATH="/.venv" \
     APP_HOME="/app" \
-    FLASK_APP="main.py"
+    FLASK_APP="main.py" \
+    FLASK_DEBUG = 1
 
 WORKDIR $APP_HOME
 
