@@ -21,4 +21,4 @@ EXPOSE 8080
 
 # CMD ["sh", "-c", "flask run --host=0.0.0.0"]
 
-CMD ["gunicorn", "-b", "0.0.0.0:8080", "main:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:5001", "main:app"]
