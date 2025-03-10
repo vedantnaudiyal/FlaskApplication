@@ -1,0 +1,20 @@
+
+
+
+version: '3.9'
+
+services:
+  flask-app:
+    build: .
+    image: us-east1-docker.pkg.dev/plexiform-dream-448705-f3/my-docker-repository/my-flask-prj-img2:latest
+    container_name: flask-app
+    ports:
+      - "8081:8080"  # Expose port 8080 on the host
+    environment:
+      - SECRET_KEY=jsahdashdkajvfhjdjhjdjjkajbkajsbckjbc823948234923t7habknlj
+      - FLASK_APP=main.py
+      - CLIENT_ID=Ov23liCWKy9TscpTZYta
+      - CLIENT_SECRET=54698e3b5e6f965a1a6e0348107c7421646d4b25
+    volumes:
+      - .:/app  # Mount the project directory as a volume inside the container
+    restart: always  # Ensure the container restarts if it crashes

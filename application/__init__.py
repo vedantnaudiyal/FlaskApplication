@@ -12,7 +12,7 @@ db=SQLAlchemy()
 def create_app(configs):
     app=Flask(__name__)
     app.config.from_object(configs)
-    app.config['SECRET_KEY']=os.environ.get('SECRET_KEY')
+    app.config['SECRET_KEY']=os.environ.get('SECRET_KEY', 'jsahdashdkajvfhjdjhjdjjkajbkajsbckjbc823948234923t7habknlj')
 
 
     db.init_app(app)
